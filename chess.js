@@ -41,18 +41,18 @@ function playSoundOnTileChange(selectedTile) {
 //
 
 const pieceImagePaths = {
-    [FENChar.WhitePawn]: "assets/resourceImages/WhitePawn.png",
-    [FENChar.WhiteKnight]: "assets/resourceImages/WhiteHorse.png",
-    [FENChar.WhiteBishop]: "assets/resourceImages/WhiteBishop.png",
-    [FENChar.WhiteRook]: "assets/resourceImages/WhiteTower.png",
-    [FENChar.WhiteQueen]: "assets/resourceImages/WhiteQueen.png",
-    [FENChar.WhiteKing]: "assets/resourceImages/WhiteKing.png",
-    [FENChar.BlackPawn]: "assets/resourceImages/RedPawn.png",
-    [FENChar.BlackKnight]: "assets/resourceImages/RedHorse.png",
-    [FENChar.BlackBishop]: "assets/resourceImages/RedBishop.png",
-    [FENChar.BlackRook]: "assets/resourceImages/RedTower.png",
-    [FENChar.BlackQueen]: "assets/resourceImages/RedQueen.png",
-    [FENChar.BlackKing]: "assets/resourceImages/RedKing.png"
+    [FENChar.WhitePawn]: "assets/resourceImages/whitePawn.png",
+    [FENChar.WhiteKnight]: "assets/resourceImages/whiteHorse.png",
+    [FENChar.WhiteBishop]: "assets/resourceImages/whiteBishop.png",
+    [FENChar.WhiteRook]: "assets/resourceImages/whiteTower.png",
+    [FENChar.WhiteQueen]: "assets/resourceImages/whiteQueen.png",
+    [FENChar.WhiteKing]: "assets/resourceImages/whiteKing.png",
+    [FENChar.BlackPawn]: "assets/resourceImages/redPawn.png",
+    [FENChar.BlackKnight]: "assets/resourceImages/redHorse.png",
+    [FENChar.BlackBishop]: "assets/resourceImages/redBishop.png",
+    [FENChar.BlackRook]: "assets/resourceImages/redTower.png",
+    [FENChar.BlackQueen]: "assets/resourceImages/redQueen.png",
+    [FENChar.BlackKing]: "assets/resourceImages/redKing.png"
 };
 
 const pieceImagesLoaded = {};
