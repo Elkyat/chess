@@ -1,4 +1,4 @@
-﻿const canvas = document.getElementById('gameCanvas');
+﻿﻿const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 let isWhiteTurn = true;
@@ -55,7 +55,7 @@ const pieceImagePaths = {
     [FENChar.BlackKing]: "assets/resourceImages/redKing.png"
 };
 
-const pieceImagesLoaded = {};
+let pieceImagesLoaded = {};
 for (const piece in pieceImagePaths) {
     pieceImagesLoaded[piece] = new Image();
     pieceImagesLoaded[piece].src = pieceImagePaths[piece];
