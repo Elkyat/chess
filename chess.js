@@ -307,18 +307,7 @@ canvas.addEventListener('mousemove', (event) => {
     }
 });
 
-canvas.addEventListener('click', event => {
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-
-    selectedTile = toGrid(mouseX, mouseY);
-
-    document.getElementById('debug1').innerText = `row: ${hoveredTile.x} - col: ${hoveredTile.y}`
-
-    drawGrid();
-    drawPieces();
-})
+// Removed duplicate click handler - selection is now handled in the main click handler below
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -631,6 +620,9 @@ canvas.addEventListener('click', event => {
         return;
     }
 
+    // Update selectedTile to show visual selection
+    selectedTile = clickedTile;
+
     if (!selectedPiece) {
         selectedPiece = pieces.find(piece => piece.x === clickedTile.x && piece.y === clickedTile.y);
     } else {
@@ -657,9 +649,11 @@ canvas.addEventListener('click', event => {
                 selectedPiece.x = clickedTile.x;
                 selectedPiece.y = clickedTile.y;
                 selectedPiece = null;
+                selectedTile = null; // Clear selection after successful move
             }
         } else {
             selectedPiece = null;
+            // Keep selectedTile to show the clicked tile even if move is invalid
         }
     }
 
